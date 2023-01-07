@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 
 Future<void> showErrorMessage(
-      BuildContext context, String errorMessage) async {
+      BuildContext context, String errorMessage, {String title = 'Error'}) async {
     return showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
           icon: const Icon(Icons.error),
+          title: Text(title),
           content: Text(errorMessage),
         );
       },
     );
   }
 
-  Future<void> showSuccessMessage(BuildContext context, String message) async {
+  Future<void> showSuccessMessage(BuildContext context, String message, {String title = 'Success!'}) async {
     return showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
           icon: const Icon(Icons.check),
+          title: Text(title),
           content: Text(message),
         );
       },
@@ -53,7 +55,7 @@ Future<void> showErrorMessage(
     );
   }
 
-  Future<String?> showGetTextDialog(BuildContext context, String title, {String confirmButtonText = 'Ok', String initialValue = ''}) async{
+  Future<String?> showPromtDialog(BuildContext context, String title, {String confirmButtonText = 'Ok', String initialValue = ''}) async{
     final TextEditingController controller = TextEditingController(text: initialValue);
     return showDialog<String>(
       context: context,

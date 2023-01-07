@@ -26,15 +26,54 @@ dependencies:
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Usually you will want to call any of the methods inside the callback of a button:
+
+### Success Message
 
 ```dart
-const like = 'sample';
+ElevatedButton(
+  onPressed: (){
+    showSuccessMessage(context, 'Success!!!');
+  },
+  child: const Text('Success Message'),
+),
 ```
 
-## Additional information
+### Error Message
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+ElevatedButton(
+  onPressed: (){
+    showErrorMessage(context, 'Error!!!');
+  },
+  child: const Text('Error Message'),
+),
+```
+
+### Confirmation Dialog
+
+```dart
+ElevatedButton(
+  onPressed: () async{
+    bool? confirm = await showConfirmationMessage(context, 'Confirmation', 'Are you sure?');
+    setState(() {
+      lastConfirmation = confirm;
+    });
+  },
+  child: const Text('Confirmation Dialog'),
+),
+```
+
+### Prompt Dialog
+
+```dart
+ElevatedButton(
+  onPressed: () async{
+    String? input = await showPromtDialog(context, 'Input dialog',);
+    setState(() {
+      lastInput = input;
+    });
+  },
+  child: const Text('Prompt Dialog'),
+),
+```
