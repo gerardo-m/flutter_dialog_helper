@@ -1,6 +1,7 @@
 name: flutter_dialog_helper
-description: A starting point for Dart libraries or applications.
-version: 0.1.0
+description: Flutter package that allows you to show very simple dialogs with a single line
+version: 0.1.1
+repository: https://github.com/gerardo-m/flutter_dialog_helper
 
 environment:
   sdk: '>=2.18.2 <3.0.0'

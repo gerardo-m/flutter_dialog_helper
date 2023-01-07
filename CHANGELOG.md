@@ -1,8 +1,10 @@
 # Change Log
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+## [0.2.0]
 
-## [0.1.0] - 2023-01-06
+*  **Breaking chage:** Renamed `showConfirmationMessage` method to `showConfirmationDialog`
+* Fixed documentation format
 
-- Initial Release
+## [0.1.0]
+
+* Initial Release

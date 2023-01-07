@@ -92,7 +92,7 @@ class _DynamicDialogsState extends State<DynamicDialogs> {
           children: [
             ElevatedButton(
               onPressed: () async{
-                bool? confirm = await showConfirmationMessage(context, 'Confirmation', 'Are you sure?');
+                bool? confirm = await showConfirmationDialog(context, 'Confirmation', 'Are you sure?');
                 setState(() {
                   lastConfirmation = confirm;
                 });
